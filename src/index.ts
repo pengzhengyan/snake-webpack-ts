@@ -1,15 +1,18 @@
 import * as _ from 'lodash'
 import './style/index.less'
 import Snake from './modules/Snake'
-const snake = new Snake()
-// console.log(new Snake)
+import Food from './modules/Food'
+import Score from './modules/ScorePanel'
+// 测试snake
+// const snake = new Snake()
+// snake.X = 100
+// snake.Y = 150
+// console.log(snake.X, snake.Y)
 
-// function component() {
-//   const element = document.createElement('div')
+// 测试food
+// const food = new Food()
+// food.change()
 
-//   element.innerHTML = _.join(['Hello', 'webpack'], ' ')
-
-//   return element
-// }
-
-// document.body.appendChild(component())
+// 测试scorePanel
+// const score = new Score()
+// score.addScore()
