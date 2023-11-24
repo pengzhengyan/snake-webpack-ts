@@ -7,7 +7,7 @@ class Score {
   private _maxLevel: number
   // 当前分数和等级
   private score = 0
-  private level = 1
+  private _level = 1
 
   constructor() {
     this.scoreEle = document.getElementById('score')!
@@ -24,6 +24,11 @@ class Score {
     this._maxLevel = v
   }
 
+  // 获取等级方法
+  get level() {
+    return this._level
+  }
+
   // 提升分数方法
   addScore() {
     this.scoreEle.innerHTML = ++this.score + ''
@@ -33,7 +38,7 @@ class Score {
   // 提升等级方法
   levelUp() {
     if(this.level < this._maxLevel) {
-      this.levelEle.innerHTML = ++this.level + ''
+      this.levelEle.innerHTML = ++this._level + ''
     }
   }
 }
